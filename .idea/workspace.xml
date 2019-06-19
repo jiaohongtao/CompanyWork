@@ -2,226 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e1ecc49-7d38-472c-b9e6-ac63596c6640" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/framework.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VERSION" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/accounts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/backends.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/decorators.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/http.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/middlewares.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/migrations/0002_initial_user_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/migrations/0003_auto_20190613_1356.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_control/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_control/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_control/decorators.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_control/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_control/migrations/0002_initial_app_control.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_control/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_control/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_control/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_control/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_control/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_control/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueking/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueking/component/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueking/component/Readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueking/component/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueking/component/apis/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueking/component/apis/bk_login.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueking/component/apis/bk_paas.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueking/component/apis/cc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueking/component/apis/cmsi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueking/component/apis/gse.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueking/component/apis/job.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueking/component/apis/sops.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueking/component/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueking/component/client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueking/component/collections.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueking/component/conf.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueking/component/exceptions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueking/component/shortcuts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueking/component/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/README" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/context_processors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/decorators.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/log.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/middlewares.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/mymako.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/pxfilter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conf/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conf/default.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conf/settings_development.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conf/settings_production.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conf/settings_testing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/error_pages/README" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/error_pages/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/error_pages/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/error_pages/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/error_pages/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/error_pages/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/error_pages/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home_application/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home_application/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home_application/celery_tasks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home_application/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home_application/migrations/0002_hostdisk_description.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home_application/migrations/0003_remove_hostdisk_description.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home_application/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home_application/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home_application/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home_application/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home_application/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/css/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/css/changelists.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/css/dashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/css/forms.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/css/ie.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/css/rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/css/widgets.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/changelist-bg.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/changelist-bg_rtl.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/default-bg-reverse.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/default-bg.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/deleted-overlay.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/gis/move_vertex_off.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/gis/move_vertex_on.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/icon-no.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/icon-unknown.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/icon-yes.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/icon_addlink.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/icon_alert.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/icon_calendar.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/icon_changelink.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/icon_clock.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/icon_deletelink.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/icon_error.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/icon_searchbox.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/icon_success.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/inline-delete-8bit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/inline-delete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/inline-restore-8bit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/inline-restore.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/inline-splitter-bg.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/nav-bg-grabber.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/nav-bg-reverse.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/nav-bg-selected.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/nav-bg.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/selector-icons.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/selector-search.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/sorting-icons.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/tooltag-add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/tooltag-arrowright.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/LICENSE-JQUERY.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/SelectBox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/SelectFilter2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/actions.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/admin/DateTimeShortcuts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/admin/RelatedObjectLookups.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/calendar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/collapse.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/collapse.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/core.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/inlines.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/inlines.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/jquery.init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/prepopulate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/prepopulate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/related-widget-wrapper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/timeparse.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/urlify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/bkDialog-1.0/css/ui-dialog.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/bkDialog-1.0/js/dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/bootstrap-3.3.4/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/bootstrap-3.3.4/css/bootstrap-theme.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/bootstrap-3.3.4/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/bootstrap-3.3.4/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/bootstrap-3.3.4/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/bootstrap-3.3.4/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/bootstrap-3.3.4/css/bootstrap_noresponsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/bootstrap-3.3.4/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/bootstrap-3.3.4/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/bootstrap-3.3.4/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/bootstrap-3.3.4/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/bootstrap-3.3.4/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/bootstrap-3.3.4/js/bootstrap-treeview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/bootstrap-3.3.4/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/bootstrap-3.3.4/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/bootstrap-3.3.4/js/npm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bk.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap_noresponsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/crown.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/dev-guide.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/expre_403.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/expre_500.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/expre_login.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/getheadimg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/icom_01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/icom_02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/icom_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/weixin_icom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/csrftoken.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/jquery-1.10.2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/jquery.json-2.3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/settings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/401.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/403.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/500.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/func_check_failed.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/base_site.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home_application/contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home_application/dev_guide.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home_application/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home_application/host_disk.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../logs/test-jht/component.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../logs/test-jht/test-jht.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../logs/test-jht/wb_mysql.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../logs/work_host/component.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../logs/work_host/wb_mysql.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../logs/work_host/work_host.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pax_global_header" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../templates_module/test-jht/base.html.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../templates_module/test-jht/home_application/contact.html.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../templates_module/test-jht/home_application/dev_guide.html.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../templates_module/test-jht/home_application/home.html.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../templates_module/test-jht/home_application/host_disk.html.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../templates_module/work_host/base.html.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../templates_module/work_host/home_application/home.html.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../templates_module/work_host/home_application/host_disk.html.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -448,12 +229,27 @@
       <workItem from="1560740229427" duration="22744000" />
       <workItem from="1560822719935" duration="9668000" />
       <workItem from="1560838892746" duration="7185000" />
-      <workItem from="1560907017584" duration="1177000" />
+      <workItem from="1560907017584" duration="1419000" />
     </task>
+    <task id="LOCAL-00001" summary="第一次修改">
+      <created>1560908262379</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1560908262379</updated>
+    </task>
+    <task id="LOCAL-00002" summary="第一次修改">
+      <created>1560908437489</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1560908437489</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46847000" />
+    <option name="totallyTimeSpent" value="47089000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -483,6 +279,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="第一次修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="第一次修改" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
