@@ -1,0 +1,187 @@
+<%inherit file="/base.html"/>
+
+<%block name="content">
+
+<head>
+    <!-- 若您需要使用Kendo UI Professional，请联系版权人获得合法的授权或许可。 -->
+    <!-- Bootstrap css -->
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/bootstrap-3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <!-- kendo ui css -->
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/kendoui-2015.2.624/styles/kendo.common.min.css" rel="stylesheet">
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/kendoui-2015.2.624/styles/kendo.default.min.css" rel="stylesheet">
+    <!-- font-awesome -->
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/fontawesome/css/font-awesome.css" rel="stylesheet">
+    <!--蓝鲸提供的公用样式库 -->
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css/bk.css" rel="stylesheet">
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css/bk_pack.css" rel="stylesheet">
+    <!-- 如果要使用Bootstrap的js插件，必须先调入jQuery -->
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/jquery-1.10.2.min.js"></script>
+    <!-- 包括所有bootstrap的js插件或者可以根据需要使用的js插件调用　-->
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/echarts-2.0/echarts-all.js"></script>
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <!-- 包括所有kendoui的js插件或者可以根据需要使用的js插件调用　-->
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/kendoui-2015.2.624/js/kendo.all.min.js"></script>
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/echarts-2.0/echarts-all.js"></script>
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/bk/js/bk.js"></script>
+    <!-- 数据埋点统计 -->
+    <script src="http://magicbox.bk.tencent.com/static_api/analysis.js"></script>
+    <!-- 以下两个插件用于在IE8以及以下版本浏览器支持HTML5元素和媒体查询，如果不需要用可以移除 -->
+    <!--[if lt IE 9]><script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/html5shiv.min.js"></script><script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/respond.min.js"></script><![endif]-->
+</head>
+
+<body class="bg-white" data-bg-color="bg-white">
+    <div class="king-page-box">
+        <div class="king-container clearfix">
+            <div class="king-block king-block-bordered king-block-themed mb0">
+                <div class="king-block-header king-info">
+                    <ul class="king-block-options">
+                        <li>
+                            <!-- <button type="button"><i class="fa fa-cog"></i></button> -->
+                        </li>
+                    </ul>
+                    <h3 class="king-block-title">主机磁盘信息录入</h3>
+                </div>
+                <div class="king-block-content">
+                    <form class="form-horizontal">
+                        <div class="form-group clearfix ">
+                            <label class="col-sm-3 control-label bk-lh30 pt0">主机名：</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control bk-valign-top" id="name" placeholder="input host name" />
+                            </div>
+                        </div>
+                        <div class="form-group clearfix ">
+                            <label class="col-sm-3 control-label bk-lh30 pt0">主机ip：</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control bk-valign-top" id="ip" placeholder="input ip">
+                            </div>
+                        </div>
+                        <div class="form-group clearfix ">
+                            <label class="control-label col-sm-3 bk-lh30 pt0">系统：</label>
+                            <div class="col-sm-9">
+                                <div class="radio pt0">
+                                    <label class="mr10">
+                                        <input type="radio" name="optionsRadios" id="windows" class="bk-top5" value="windows">
+                                        <span class="bk-lh30">windows</span>
+                                    </label>
+                                    <label class="mr10">
+                                        <input type="radio" name="optionsRadios" id="linux" class="bk-top5" value="linux">
+                                        <span class="bk-lh30">linux</span>
+                                    </label>
+                                    <label class="mr10">
+                                        <input type="radio" name="optionsRadios" id="mac" class="bk-top5" value="mac">
+                                        <span class="bk-lh30">mac</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group clearfix ">
+                            <label class="col-sm-3 control-label bk-lh30 pt0">磁盘分区：</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control bk-valign-top" id="disk" placeholder="input disk partition">
+                            </div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <div class="col-sm-9 col-sm-offset-3">
+                                <button id="hostSubmit" type="button" class="king-btn mr10  king-success">提交</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="king-block king-block-bordered king-block-themed mb0">
+                <div class="king-block-header king-info">
+                    <ul class="king-block-options">
+                        <li>
+                            <button type="button" id="fastExec">快速执行</button>
+                            <!-- <button type="button"><i class="fa fa-cog"></i></button> -->
+                        </li>
+                    </ul>
+                    <h3 class="king-block-title">主机磁盘信息展示</h3>
+                </div>
+                <div class="king-block-content">
+                    <table class="table mb0 pr15 ranger-box ">
+                        <thead>
+                            <tr>
+                                <th style="width: 20%;">主机名</th>
+                                <th style="width: 20%;">主机IP</th>
+                                <th style="width: 20%;">主机系统</th>
+                                <th>磁盘分区</th>
+                                <th>创建时间</th>
+                            </tr>
+                        </thead>
+                        <tbody id="hostDetail">
+                            % for item in hostAll:
+                                <tr>
+                                    <td style="width: 20%;">${item['name']}</td>
+                                    <td style="width: 20%;">${item['ip']}</td>
+                                    <td style="width: 20%;">${item['os']}</td>
+                                    <td style="width: 20%;">${item['disk']}</td>
+                                    <td style="width: 20%;">${item['create_time']}</td>
+                                </tr>
+                            % endfor
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+
+            $("#fastExec").click(function () {
+               $.ajax({
+                   url: site_url + "fast_exec_script/",
+                   type: "POST",
+                   async: false,
+                   success: function (res) {
+                       console.log(res);
+                       console.log("执行完毕！")
+                   }
+               })
+            });
+
+            /*let getHost = $.ajax({
+                url: site_url + "host_list/",
+                type: "GET",
+                async: false,
+                success: function (res) {
+                    for(let i=0 ;i<= res['hostAll'].length;i++){
+
+                        console.log(res['hostAll'][i])
+                    }
+
+                }
+            });*/
+
+            $("#hostSubmit").click(function () {
+                let name = $("#name").val();
+                let ip = $("#ip").val();
+                let os = $("input[name='optionsRadios']:checked").val();
+                let disk = $("#disk").val();
+                let data = {"name": name, "ip": ip, "os": os, "disk": disk};
+                console.log(data);
+                console.log(site_url + "host_create/");
+
+                $.ajax({
+                    method: "POST",
+                    url: site_url + "host_create/",
+                    data: JSON.stringify(data),
+                    async: false,
+                    dataType: "json",
+                    headers: {'Content-Type': 'application/json'},
+                    success: function (res) {
+                        console.log(res);
+                        alert("添加成功");
+                        window.location.href = site_url + "host_disk/"
+                    }
+                })
+            })
+        });
+
+    </script>
+</body>
+
+
+</%block>
