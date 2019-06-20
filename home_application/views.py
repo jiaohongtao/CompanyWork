@@ -12,7 +12,7 @@ See the License for the specific language governing permissions and limitations 
 from common.mymako import render_mako_context, render_json
 from models import HostDisk
 import json
-from blueking.component.shortcuts import get_client_by_user
+from blueking.component.shortcuts import get_client_by_user, get_client_by_request
 import base64
 
 
@@ -95,6 +95,42 @@ def fast_exec_script(request):
     client = get_client_by_user(user)
     result = client.job.fast_execute_script(kwargs)
     print result
+    return render_json(result)
+
+
+def send_mail(request):
+    client = get_client_by_request(request)
+
+    # kwargs = {
+    #     # "receiver": "Tera1996,jht1007760854",
+    #     "receiver__username": "Tera1996,jht1007760854",
+    #     "data": {
+    #         "heading": "blueking alarm",
+    #         "message": "This is a test.",
+    #         "date": "2017-02-22 15:36",
+    #         "remark": "This is a test!"
+    #     }
+    # }
+
+    kwargs = {
+        "receiver": "yanweijian_tt@163.com",
+        "sender": "18332120276@163.com",
+        "title": "This is a Test",
+        "content": "<html>Welcome to Blueking</html>",
+    }
+
+    result = client.cmsi.send_mail(**kwargs)
+
+    print result
+    return render_json(result)
+
+
+def get_user_infos(request):
+    client = get_client_by_request(request)
+
+    result = client.bk_login.get_all_users({"bk_role": 0})
+    print result
+
     return render_json(result)
 
 # def host_list(request):

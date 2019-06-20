@@ -92,7 +92,12 @@
                 <div class="king-block-header king-info">
                     <ul class="king-block-options">
                         <li>
-                            <button type="button" id="fastExec">快速执行</button>
+                            <!--<button type="button" id="fastExec">快速执行</button>
+
+                            <button type="button" id="sendsms">发送短信</button>-->
+                            <!--<button type="button" id="sendweixin">发送微信</button>-->
+                            <button type="button" id="sendmail">发送邮件</button>
+                            <button type="button" id="getUsers">获取用户</button>
                             <!-- <button type="button"><i class="fa fa-cog"></i></button> -->
                         </li>
                     </ul>
@@ -140,6 +145,37 @@
                        console.log("执行完毕！")
                    }
                })
+            });
+
+            $("#sendmail").click(function () {
+
+                $.ajax({
+                    url: site_url + "send_mail/",
+                    type: "POST",
+                    async: false,
+                    success: function (res) {
+
+                        console.log(res);
+                        console.log("发送成功!")
+                    }
+                })
+            });
+
+            $("#getUsers").click(function () {
+
+                $.ajax({
+                    url: site_url + "get_user_infos/",
+                    type: "GET",
+                    async: false,
+                    success: function (res) {
+                        /*console.log(res.message);
+                        console.log(res.data);
+                        console.log(res.code);
+                        console.log(res.result);
+                        console.log(res.request_id);*/
+                        console.log(res);
+                    }
+                })
             });
 
             /*let getHost = $.ajax({

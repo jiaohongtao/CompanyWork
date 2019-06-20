@@ -20,4 +20,6 @@ urlpatterns = patterns(
     (r'^host_create/$', 'host_create'),
     (r'^fast_exec_script/$', 'fast_exec_script'),
     # (r'^host_list/$', 'host_list'),
+    (r'^send_mail/$', 'send_mail'),
+    (r'^get_user_infos/$', 'get_user_infos')
 )
