@@ -1,0 +1,388 @@
+<%inherit file="/base.html"/>
+
+<%block name="content">
+
+<!-- 若您需要使用Kendo UI Professional，请联系版权人获得合法的授权或许可。 -->
+<!-- Bootstrap css -->
+<link href="https://magicbox.bk.tencent.com/static_api/v3/assets/bootstrap-3.3.4/css/bootstrap.min.css"
+      rel="stylesheet">
+<!-- kendo ui css -->
+<link href="https://magicbox.bk.tencent.com/static_api/v3/assets/kendoui-2015.2.624/styles/kendo.common.min.css"
+      rel="stylesheet">
+<link href="https://magicbox.bk.tencent.com/static_api/v3/assets/kendoui-2015.2.624/styles/kendo.default.min.css"
+      rel="stylesheet">
+<!-- font-awesome -->
+<link href="https://magicbox.bk.tencent.com/static_api/v3/assets/fontawesome/css/font-awesome.css" rel="stylesheet">
+<!--蓝鲸提供的公用样式库 -->
+<link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css/bk.css" rel="stylesheet">
+<link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css/bk_pack.css" rel="stylesheet">
+<!-- 如果要使用Bootstrap的js插件，必须先调入jQuery -->
+<script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/jquery-1.10.2.min.js"></script>
+<!-- 包括所有bootstrap的js插件或者可以根据需要使用的js插件调用　-->
+<script src="https://magicbox.bk.tencent.com/static_api/v3/assets/echarts-2.0/echarts-all.js"></script>
+<script src="https://magicbox.bk.tencent.com/static_api/v3/assets/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+<!-- 包括所有kendoui的js插件或者可以根据需要使用的js插件调用　-->
+<script src="https://magicbox.bk.tencent.com/static_api/v3/assets/kendoui-2015.2.624/js/kendo.all.min.js"></script>
+<script src="https://magicbox.bk.tencent.com/static_api/v3/assets/echarts-2.0/echarts-all.js"></script>
+<script src="https://magicbox.bk.tencent.com/static_api/v3/bk/js/bk.js"></script>
+<!-- 数据埋点统计 -->
+<script src="http://magicbox.bk.tencent.com/static_api/analysis.js"></script>
+<!-- 以下两个插件用于在IE8以及以下版本浏览器支持HTML5元素和媒体查询，如果不需要用可以移除 -->
+<!--[if lt IE 9]>
+<script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/html5shiv.min.js"></script>
+<script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/respond.min.js"></script><![endif]-->
+
+<link href="https://magicbox.bk.tencent.com/static_api/v3/assets/toastr-2.1.2/toastr.min.css" rel="stylesheet">
+<script src="https://magicbox.bk.tencent.com/static_api/v3/assets/toastr-2.1.2/toastr.min.js"></script>
+
+<div class="king-page-box">
+
+    <div class="king-layout1-header">
+        <nav role="navigation" class="navbar navbar-default king-horizontal-nav2 f14 ">
+            <div class="container " style="width:100%;overflow:hidden;">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed navbar-toggle-sm" data-toggle="collapse"
+                            data-target="#king-horizontal-nav2-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="javascript:;">
+                        <img src="https://magicbox.bk.tencent.com/static_api/v3/bk/images/logo3.png" alt=""
+                             class="logo"> </a>
+                </div>
+                <div class="collapse navbar-collapse navbar-responsive-collapse" id="king-horizontal-nav2-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="king-navbar-active"><a href="${SITE_URL}croissantOne/">首页</a></li>
+                        <li><a href="${SITE_URL}execute_record/">执行记录</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="javascript:;">
+                                <img src="${STATIC_URL}img/getheadimg.jpg" width="40" alt="Avatar" class="avatar-img">
+                                % if request.user.is_superuser:
+                                <i class="crown"></i>
+                                % endif
+                                <span>${request.user.username}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="king-container clearfix">
+
+        <div class="container-fluid mb0 ">
+            <div class="row">
+                <div class="col-md-12">
+                    <form class="form-horizontal">
+                        <div class="form-group clearfix ">
+                            <label class="col-sm-2 control-label bk-lh30 pt0">业务名称：</label>
+                            <div class="col-sm-2">
+                                <select name="business_two" id="business_two" class="form-control bk-valign-top">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group clearfix ">
+                            <label class="col-sm-2 control-label bk-lh30 pt0">模板类型：</label>
+                            <div class="col-sm-2">
+                                <select name="template_type_two" id="template_type_two"
+                                        class="form-control bk-valign-top">
+                                    <option value="0">变更发布</option>
+                                    <option value="1">扩缩容</option>
+                                    <option value="2">上线类</option>
+                                    <option value="3">下线类</option>
+                                    <option value="4">执行维护</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group clearfix ">
+                            <label class="col-sm-2 control-label bk-lh30 pt0">任务状态：</label>
+                            <div class="col-sm-2">
+                                <select name="status_two" id="status_two" class="form-control bk-valign-top">
+                                    <option value="选择项1">待操作</option>
+                                    <option value="选择项2">操作中</option>
+                                    <option value="选择项3">完成</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group clearfix ">
+                            <label class="col-sm-2 control-label bk-lh30 pt0">创建人：</label>
+                            <div class="col-sm-2">
+                                <select name="create_two" id="create_two" class="form-control bk-valign-top">
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group clearfix ">
+                            <label class="col-sm-2 control-label bk-lh30 pt0">模板名称：</label>
+                            <div class="col-sm-2">
+                                <input type="text" class="form-control bk-valign-top" id="template_name_two"></div>
+                        </div>
+                        <div class="form-group clearfix ">
+                            <label class="col-sm-2 control-label bk-lh30 pt0">操作识别号：</label>
+                            <div class="col-sm-2">
+                                <input type="text" class="form-control bk-valign-top" id="option_two"></div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <div class="col-sm-9 col-sm-offset-9">
+                                <button type="button" class="king-btn mr10  king-success" onclick="selectByCondition()">
+                                    查询
+                                </button>
+                                <button type="button" class="king-btn king-default " onclick="clean_conditions()">清空
+                                </button>
+                                <button type="button" class="king-btn mr10  king-success"
+                                        onclick="show_create_dialog();">新建
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid mb0 ">
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table mb0 pr15 ranger-box2  ">
+                        <thead>
+                        <tr>
+                            <!-- 10.. 5,5 -->
+                            <th>模板名称</th>
+                            <th>操作识别号</th>
+                            <th>业务名称</th>
+                            <th>模板类型</th>
+                            <th>可操作者</th>
+                            <th>创建者</th>
+                            <th>创建时间</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Ravi Kumar</td>
+                            <td>India</td>
+                            <td>23/12/2012</td>
+                            <td>Paid</td>
+                            <td>Paid</td>
+                            <td>Paid</td>
+                            <td>Paid</td>
+                            <td>
+                                <button class="btn btn-xs btn-success" onclick="goResolve()"><i
+                                        class="glyphicon glyphicon-adjust"></i>处理
+                                </button>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 模擬彈框 -->
+<div class="modal fade" id="create_dialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+     style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+                <h2 class="modal-title" id="myModalLabel">
+                    创建待办任务
+                </h2>
+            </div>
+            <div class="modal-body">
+                <!-- 添加内容 -->
+                <div class="king-block king-block-bordered">
+
+                    <div class="king-block-content">
+                        <form class="form-horizontal" method="POST">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">业务名称：</label>
+                                <span class="text-danger mt5 fl">*</span>
+                                <div class="col-sm-7">
+                                    <select name="" id="bk_biz_modal" class="form-control bk-valign-top">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">模板类型：</label>
+                                <span class="text-danger mt5 fl">*</span>
+                                <div class="col-sm-7">
+                                    <select id="bk_type_modal" class="form-control bk-valign-top">
+                                        <option value="变更发布">变更发布</option>
+                                        <option value="扩缩容">扩缩容</option>
+                                        <option value="上线类">上线类</option>
+                                        <option value="下架类">下架类</option>
+                                        <option value="执行维护">执行维护</option>
+                                    </select>
+
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">模板名称：</label>
+                                <span class="text-danger mt5 fl">*</span>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="modal_template_name"/>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">操作识别符：</label>
+                                <span class="text-danger mt5 fl">*</span>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="dialog_option"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">待办文件</label>
+                                <span class="text-danger mt5 fl">*</span>
+                                <div class="col-sm-7">
+                                    <input type="file" id="file" name="myfile">
+                                </div>
+                            </div>
+                            <div class="form-group" type="hidden">
+                                <input type="hidden" class="form-control" id="modal_template_id"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button onclick="create_task()" type="button" class="btn btn-primary">确定</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<script>
+    function show_create_dialog() {
+        $("#create_dialog").modal("show");
+    }
+</script>
+
+
+<script>
+    $(function () {
+
+        getBusiness($("#business_two"));
+        getBusiness($("#bk_biz_modal"));
+        getAllUsers();
+    });
+
+    function create_task() {
+
+        let bk_biz_selected = $("#bk_biz_modal option:selected");
+        let bk_biz_id = bk_biz_selected.val();
+        let bk_biz_name = bk_biz_selected.text();
+        let template_type = $("#bk_type_modal option:selected").text();
+        let template_name = $("#modal_template_name").val();
+        let dialog_option = $("#dialog_option").val();
+        let file = $("#file")[0].files[0];
+
+        let formData = new FormData();
+        formData.append("bk_biz_id", bk_biz_id);
+        formData.append("bk_biz_name", bk_biz_name);
+        formData.append("template_type", template_type);
+        formData.append("template_name", template_name);
+        formData.append("dialog_option", dialog_option);
+        formData.append("file", file);
+
+        // 创建待办文件
+        $.ajax({
+
+            url: site_url + "create_work_two/",
+            type: "POST",
+            data: formData,
+            // 告诉jQuery不要去处理发送的数据
+            processData: false,
+            // 告诉jQuery不要去设置Content-Type请求头
+            contentType: false,
+            async: false,
+            error: function (res) {
+                $("#create_dialog").modal("hide");
+                toastr.remove();
+                toastr.success('<br>创建失败');
+            },
+            success: function (res) {
+
+                $("#create_dialog").modal("hide");
+                toastr.remove();
+                toastr.success('<br>创建成功');
+            }
+        })
+    }
+
+    /*// 查询
+    function selectByCondition() {
+
+        let business_two = $("#business_two");
+        $.ajax({})
+    }*/
+
+    function clean_conditions() {
+        $("#business_two").val("");
+        $("#template_name_two").val("");
+        $("#template_type_two").val("");
+        $("#option_two").val("");
+        $("#create_two").val("");
+        $("#status_two").val("");
+    }
+
+    // 异步请求后台业务数据加载， select为选择的节点
+    function getBusiness(select) {
+        $.ajax({
+            url: site_url + "get_business/",
+            type: "POST",
+            async: false,
+            success: function (res) {
+                let businessInfo = res.data.info;
+                let businessHtml = "";
+                select.empty();
+                for (let data of businessInfo) {
+                    businessHtml += "<option value=\"" + data.bk_biz_id + "\">" + data.bk_biz_name + "</option>";
+                }
+                select.html(businessHtml);
+            }
+        });
+    }
+
+    function getAllUsers() {
+        $.ajax({
+            url: site_url + "get_all_users/",
+            type: "GET",
+            async: false,
+            success: function (res) {
+
+                let data = res["message"];
+                let userHtml = "";
+                let createTwo = $("#create_two");
+                createTwo.empty();
+                $.map(data, function (item, index) {
+                    userHtml += "<option value=\"" + index + "\">" + item.name + "</option>";
+                });
+                createTwo.html(userHtml);
+            }
+        });
+    }
+
+
+    function goResolve() {
+
+        window.location.href = site_url + "resolve_work/"
+    }
+</script>
+
+</%block>

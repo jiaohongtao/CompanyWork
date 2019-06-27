@@ -20,4 +20,10 @@ urlpatterns = patterns(
     (r'^execute_record/$', 'execute_record'),
     (r'^get_execute_details/$', 'get_execute_details'),
     (r'^get_execute_log/$', 'get_execute_log'),
+
+    (r'^croissant_two/$', 'croissant_two'),
+    (r'^get_all_users/$', 'get_all_users'),
+
+    (r'^create_work_two/$', 'create_work_two'),
+    (r'^resolve_work/$', 'resolve_work'),
 )
